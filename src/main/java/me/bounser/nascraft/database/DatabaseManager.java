@@ -27,22 +27,22 @@ public class DatabaseManager {
             case SQLITE:
                 database = SQLite.getInstance(); break;
 
-            case MYSQL:
-                database = new MySQL(
-                        Config.getInstance().getHost(),
-                        Config.getInstance().getPort(),
-                        Config.getInstance().getDatabase(),
-                        Config.getInstance().getUser(),
-                        Config.getInstance().getPassword()
-                );
-                break;
-
-            case REDIS:
-                database = new Redis(
-                        Config.getInstance().getHost(),
-                        Config.getInstance().getPort(),
-                        Config.getInstance().getPassword()
-                ); break;
+//            case MYSQL:
+//                database = new MySQL(
+//                        Config.getInstance().getHost(),
+//                        Config.getInstance().getPort(),
+//                        Config.getInstance().getDatabase(),
+//                        Config.getInstance().getUser(),
+//                        Config.getInstance().getPassword()
+//                );
+//                break;
+//
+//            case REDIS:
+//                database = new Redis(
+//                        Config.getInstance().getHost(),
+//                        Config.getInstance().getPort(),
+//                        Config.getInstance().getPassword()
+//                ); break;
         }
 
         database.connect();

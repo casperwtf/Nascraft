@@ -93,6 +93,11 @@ public class MarketCommand extends Command {
                 return;
             }
 
+            if (quantity <= 0) {
+                Lang.get().message(player, Message.MARKET_CMD_INVALID_QUANTITY);
+                return;
+            }
+
             if (quantity > 64) {
                 Lang.get().message(player, Message.MARKET_CMD_MAX_QUANTITY_REACHED);
                 return;
